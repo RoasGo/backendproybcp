@@ -17,3 +17,21 @@ insert into tb_tipo_notificaciones values ( 2, "Transaccion");
 INSERT INTO tb_usuarios values (1, 'juan', 'perez', 'tresdiez', 'asd');
 INSERT INTO tb_usuarios values (2, 'jose', 'lopez', 'donplacer', '1234');
 INSERT INTO tb_campanas (cod_camp, titulo, descripcion, fech_fin, fech_ini, fecha, hora, cod_usu_cod_usu) values (1, 'Cuenta Ganadora','Abre tu cuenta ganadora y participa por el carro del año','2000-07-07','2000-07-07','2000-07-07','7:00',1);
+
+insert into tb_transacciones values ( 1, 2, 'Esta es una descripcion de prueba', '2020-12-02', '12:00', 500.00, 1, 1);
+insert into tb_transacciones values ( 2, 2, 'Esta es una descripcion de prueba', '2020-12-02', '10:00', 450.00, 1, 1);
+insert into tb_transacciones values ( 3, 2, 'Esta es una descripcion de prueba', '2020-12-02', '10:00', 50.00, 1, 1);
+insert into tb_transacciones values ( 4, 2, 'Esta es una descripcion de prueba', '2020-12-02', '11:00', 620.00, 1, 1);
+insert into tb_transacciones values ( 5, 2, 'Esta es una descripcion de prueba', '2020-12-02', '13:00', 70.00, 1, 1);
+insert into tb_transacciones values ( 6, 2, 'Esta es una descripcion de prueba', '2020-12-02', '14:00', 80.00, 1, 1);
+
+insert into tb_notificaciones values ( 1, 'Esta es otra descripcion de prueba', 0, '2020-12-12', '15:00', 'Transferencia realizada con exito', 2);
+insert into tb_notificaciones values ( 2, 'Esta es otra descripcion de prueba', 0, '2020-12-12', '15:00', 'Transferencia realizada con exito', 2);
+
+insert into tb_destino_notificaciones values ( 1, 1 );
+insert into tb_destino_notificaciones values ( 2, 2 );
+
+insert into tb_destino_notificaciones_clientes values( 1, 1 );
+insert into tb_destino_notificaciones_clientes values( 1, 2 );
+insert into tb_destino_notificaciones_clientes values( 2, 1 );
+insert into tb_destino_notificaciones_clientes values( 2, 2 );

@@ -35,8 +35,8 @@ public class CuentaBancariaRestController {
 		return cuentasService.obtenerCuentas(cliente);
 	}
 
-	@PostMapping("{numCuenta}")
-	public CuentasBancarias obtenerCuentasPorNumero(@RequestBody String numCuenta) {
+	@GetMapping("/numero/{numCuenta}")
+	public CuentasBancarias obtenerCuentasPorNumero(@PathVariable String numCuenta) {
 
 		return cuentasService.obtenerPorNumero(numCuenta);
 	}

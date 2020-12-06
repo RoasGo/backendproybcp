@@ -36,6 +36,13 @@ public class CuentaBancariaRestController {
 
 		return cuentasService.obtenerCuentas(cliente);
 	}
+	
+	@GetMapping("/codigo/{codCuenta}")
+	public CuentasBancarias obtenerCuenta(@PathVariable Long codCuenta) {
+		
+		
+		return cuentasService.obtenerCuenta(codCuenta).get();
+	}
 
 	@GetMapping("/numero/{numCuenta}")
 	public CuentasBancarias obtenerCuentasPorNumero(@PathVariable String numCuenta) {

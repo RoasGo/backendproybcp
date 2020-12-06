@@ -29,10 +29,13 @@ public class Clientes {
 	@Column(name = "apemat_cli", length = 45, nullable = false)
 	private String apemat_cli;
 
-	@Column(name = "dni", length = 45, nullable = false)
-	private String dni;
+	@Column(name = "dni", length = 8, nullable = false)
+	private int dni;
 	
 	@Column(name = "correo", length = 45, nullable = false)
 	private String correo;
+	
+	@Column(name = "password", length = 20, nullable = false)
+	private String password;
 
 }

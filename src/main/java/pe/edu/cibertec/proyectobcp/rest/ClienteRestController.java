@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import pe.edu.cibertec.proyectobcp.model.Auth;
 import pe.edu.cibertec.proyectobcp.model.Clientes;
 import pe.edu.cibertec.proyectobcp.services.ClienteService;
 
@@ -55,6 +56,17 @@ public class ClienteRestController {
 	@DeleteMapping("{id}")
 	public void eliminar(@PathVariable Long id) {
 		clienteService.eliminar(id);
+	}
+
+	@PostMapping(value = "/autenticar")
+	public Clientes autenticarCliente(@RequestBody Auth credenciales) {
+
+		Clientes clienteAutenticado = clienteService.authentication(credenciales);
+		if (clienteAutenticado != null) {
+			return clienteAutenticado;
+		}
+
+		return new Clientes();
 	}
 
 }

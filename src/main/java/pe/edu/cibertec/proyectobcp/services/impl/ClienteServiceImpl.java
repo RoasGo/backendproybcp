@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import pe.edu.cibertec.proyectobcp.model.Auth;
 import pe.edu.cibertec.proyectobcp.model.Clientes;
 import pe.edu.cibertec.proyectobcp.repository.ClienteRepository;
 import pe.edu.cibertec.proyectobcp.services.ClienteService;
@@ -49,6 +50,13 @@ public class ClienteServiceImpl implements ClienteService {
 	public Optional<Clientes> obtenerPorId(Long id) {
 
 		return clienteRepository.findById(id);
+	}
+
+	@Override
+	public Clientes authentication(Auth claves) {
+		
+		
+		return clienteRepository.autenticarCliente(claves.getDni(), claves.getPassword());
 	}
 
 }

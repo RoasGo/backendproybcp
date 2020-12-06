@@ -32,9 +32,6 @@ public class CuentasBancarias {
 	@Column(name = "tarjeta", length = 16, nullable = false)
 	private String tarjeta;
 
-	@Column(name = "password", length = 6, nullable = false)
-	private String password;
-
 	@ManyToOne
 	private TipoMoneda cod_tipo;
 
